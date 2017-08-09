@@ -8,13 +8,13 @@ body {
   color: white;
   text-shadow: 0 0 3px black;
   background: #000000 url('img/bg.png') bottom right no-repeat;
-  background-size: auto 80%;
+  background-size: auto 90%;
   background-attachment: fixed;
   font-family: sans-serif;
   font-size: 16px;
   min-height: 100%;
   padding-top: 160px;
-  padding-bottom: 90px;
+  padding-bottom: 150px;
 }
 .container {
   max-width: 1300px;
@@ -32,38 +32,81 @@ a:visited,
 a:active {
   opacity: .8;
 }
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.row .col {
+  width: 320px;
+  padding-right: 30px;
+}
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-top: 30px solid black;
+  z-index: 1;
+}
+header h1 {
   font-family: 'Bebas Neue';
   font-weight: 600;
   font-size: 100px;
   line-height: 128px;
   color: white;
-  background-color: #ff0000;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  border-top: 30px solid black;
+  background-color: red;
+  display: inline-block;
+  margin: 0 -20px;
+  padding: 0 20px;
   box-shadow: 0 0 60px black;
+}
+header h1:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-color: red;
+  left: 0;
 }
 article p {
   line-height: 150%;
+  margin: 5px 0 30px;
 }
-article p.big {
+article ul {
+  line-height: 150%;
+  margin: -30px 0 30px;
+}
+article a img {
+  display: block;
+  max-width: 100%;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s;
+}
+article a img:hover {
+  opacity: .8;
+}
+article .big {
   font-size: 20px;
   max-width: 500px;
 }
 footer {
+  border-top: 1px solid white;
   border-bottom: 30px solid #ff0000;
-  padding: 15px 0;
   font-size: 14px;
   position: fixed;
   width: 100%;
+  padding: 15px 0;
+  background-color: black;
   bottom: 0;
 }
 footer .container > * {
   display: inline-block;
   margin-right: 15px;
   vertical-align: middle;
+}
+footer .logo {
+  width: 100px;
 }
 footer .phone,
 footer .btn {
@@ -81,24 +124,5 @@ footer .btn {
   color: black;
   text-shadow: none;
   border-radius: 5px;
-}
-footer:before,
-footer:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 820px;
-  height: 100%;
-  background: black;
-  background: -webkit-linear-gradient(left, #000000 80%, transparent);
-  background: linear-gradient(to right, #000000 80%, transparent);
-  z-index: -1;
-}
-footer:after {
-  top: -20px;
-  height: 20px;
-  background: -webkit-linear-gradient(bottom, #000000, transparent);
-  background: linear-gradient(to top, #000000, transparent);
 }
 /*# sourceMappingURL=common.css.map */

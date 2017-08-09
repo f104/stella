@@ -15,13 +15,13 @@ body {
   color: white;
   text-shadow: 0 0 3px black;
   background: black url('img/bg.png') bottom right no-repeat;
-  background-size: auto 80%;
+  background-size: auto 90%;
   background-attachment: fixed;
   font-family: sans-serif;
   font-size: 16px;
   min-height: 100%;
   padding-top: 160px;
-  padding-bottom: 90px;
+  padding-bottom: 150px;
 
 }
 .container {
@@ -37,41 +37,82 @@ a {
     opacity: .8;
   }
 }
+.row {
+  display: flex;
+  .col {
+    width: 320px;
+    padding-right: 30px;
+  }
+}
 
 header {
-  .bebas;
-  font-size: 100px;
-  line-height: 128px;
-  color: white;
-  background-color: @red-color;
   position: fixed;
   width: 100%;
   top: 0;
   border-top: 30px solid black;
-  box-shadow: 0 0 60px black;
+  z-index: 1;
+  h1 {
+    .bebas;
+    font-size: 100px;
+    line-height: 128px;
+    color: white;
+    background-color: red;
+    display: inline-block;
+    margin: 0 -20px;
+    padding: 0 20px;
+    box-shadow: 0 0 60px black;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background-color: red;
+      left: 0;
+    }
+  }
 }
 
 article {
   p {
     line-height: 150%;
-    &.big {
-      font-size: 20px;
-      max-width: 500px;
+    margin: 5px 0 30px;
+  }
+  ul {
+    line-height: 150%;
+    margin: -30px 0 30px;
+  }
+  a {
+    img {
+      display: block;
+      max-width: 100%;
+      transition: all .2s ease-in-out 0s;
+      &:hover {
+        opacity: .8;
+      }
     }
+  }
+  .big {
+    font-size: 20px;
+    max-width: 500px;
   }
 }
 
 footer {
+  border-top: 1px solid white;
   border-bottom: 30px solid @red-color;
-  padding: 15px 0; 
   font-size: 14px;
   position: fixed;
   width: 100%;
+  padding: 15px 0; 
+  background-color: black;
   bottom: 0;
   .container > * {
     display: inline-block;
     margin-right: 15px;
     vertical-align: middle;
+  }
+  .logo {
+    width: 100px;
   }
   .phone, .btn {
     .bebas;
@@ -86,21 +127,5 @@ footer {
     color: black;
     text-shadow: none;
     border-radius: 5px;
-  }
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 820px;
-    height: 100%;
-    background: black;
-    background: linear-gradient(to right, black 80%, transparent);
-    z-index: -1;
-  }
-  &:after {
-    top: -20px;
-    height: 20px;
-    background: linear-gradient(to top, black, transparent);
   }
 }

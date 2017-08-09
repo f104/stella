@@ -5,36 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
     <link href="assets/css/common.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
-      <div class="container">Стелла «Победители»</div>
+      <div class="container">
+        <h1>Стелла «Победители»</h1>
+      </div>
     </header>
     <article>
       <div class="container">
-        <p class="big">Композиция может устанавливаться:<br>
-          - парки и скверы, аллеи славы;<br>
-          - военные и кадетские училища;<br>
-          - воинские части;<br>
-          - на территориях предприятий, где имеются аллеи славы.</p>
-        <p class="big">Военно-патриотическая тема позволяет использовать композицию 
-          с различной смысловой нагрузкой:<br>
-          - Великая Отечественная Война;<br>
-          - горячие точки;<br>
-          - локальные конфликты;<br>
-          - труженикам тыла.</p>
-        <p class="big">Военно-патриотическая тема позволяет использовать композицию 
-          с различной смысловой нагрузкой:<br>
-          - Великая Отечественная Война;<br>
-          - горячие точки;<br>
-          - локальные конфликты;<br>
-          - труженикам тыла.</p>
+        <div class="big">
+          <p>Композиция может устанавливаться:</p>
+          <ul>
+            <li>в парках и скверах, аллеях славы;</li>
+            <li>в военных и кадетских училищах;</li>
+            <li>в воинских частях;</li>
+            <li>на территориях предприятий, где имеются аллеи славы.</li>
+          </ul>
+          <p>Военно-патриотическая тема позволяет использовать композицию 
+            с различной смысловой нагрузкой:</p>
+          <ul>
+            <li>Великая Отечественная Война;</li>
+            <li>горячие точки;</li>
+            <li>локальные конфликты;</li>
+            <li>труженикам тыла.</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a href="assets/images/01.jpg" data-fancybox="gallery"><img src="assets/images/01s.jpg" alt="Стелла Победители"></a>
+            <p>Композиция состоит из 3х секционной 
+              вертикальной стеллы и подиума в виде 
+              пятиконечной звезды.<br> 
+              Внутреннее пространство стеллы 
+              образует пятиконечную звезду.</p>
+            <a href="assets/images/03.jpg" data-fancybox="gallery"><img src="assets/images/03s.jpg" alt="Стелла Победители"></a>
+          </div>
+          <div class="col">
+            <a href="assets/images/04.jpg" data-fancybox="gallery"><img src="assets/images/04s.jpg" alt="Стелла Победители"></a>
+            <p>Обрамление контура звезды выполнено 
+              из нержавеющего профиля, 
+              внутри которого находится 
+              светодиодная лента, подсвечивающая 
+              композицию в темное время.</p>
+            <a href="assets/images/05.jpg" data-fancybox="gallery"><img src="assets/images/05s.jpg" alt="Стелла Победители"></a>
+            <p>Подсветка центральной части (пули или 
+              иного объекта) осуществляется 
+              светодиодной лампой направленного 
+              света.<br>
+              Источник света находится 
+              в герметичном плафоне.</p>
+          </div>
+          <div class="col">
+            <a href="assets/images/06.jpg" data-fancybox="gallery"><img src="assets/images/06s.jpg" alt="Стелла Победители"></a>
+            <p>В центре композиции установлен патрон 
+              с остроконечной пулей, 
+              выполненный из нержавеющей стали.</p>
+            <p>Для профильных предприятий, 
+              выпускавших или выпускающих оборонную 
+              продукцию, предусмотрена установка 
+              макета продукции: пуля, танк, 
+              артиллерийское орудие, самолет и т. п.</p>
+          </div>
+        </div>
       </div>
     </article>
     <footer>
       <div class="container">
-        <img src="assets/images/logo.png" alt="МПП Старт">
+        <img class="logo" src="assets/images/logo.png" alt="МПП Старт">
         <a class="phone" href="+78452444444">(8452) 44-44-44</a>
         <a class="btn" href="#">Напишите нам</a>
         <span>Или закажите<br>
@@ -42,5 +82,8 @@
         </span>
       </div>
     </footer>
+    <script src="assets/js/libs/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/libs/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script src="assets/js/common.js" type="text/javascript"></script>
   </body>
 </html>
