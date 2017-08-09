@@ -1,0 +1,106 @@
+@import "./fonts/bebas/bebasneue.css";
+@red-color: red;
+
+.bebas() {
+  font-family: 'Bebas Neue';
+  font-weight: 600;
+}
+
+/* dev */
+html {
+  height: 100%;
+}
+body {
+  background-color: black;
+  color: white;
+  text-shadow: 0 0 3px black;
+  background: black url('img/bg.png') bottom right no-repeat;
+  background-size: auto 80%;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  font-size: 16px;
+  min-height: 100%;
+  padding-top: 160px;
+  padding-bottom: 90px;
+
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+a {
+  color: white;
+  text-decoration: underline;
+  transition: all .2s ease-in-out 0s;
+  &:hover, &:visited, &:active {
+    opacity: .8;
+  }
+}
+
+header {
+  .bebas;
+  font-size: 100px;
+  line-height: 128px;
+  color: white;
+  background-color: @red-color;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-top: 30px solid black;
+  box-shadow: 0 0 60px black;
+}
+
+article {
+  p {
+    line-height: 150%;
+    &.big {
+      font-size: 20px;
+      max-width: 500px;
+    }
+  }
+}
+
+footer {
+  border-bottom: 30px solid @red-color;
+  padding: 15px 0; 
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  .container > * {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+  .phone, .btn {
+    .bebas;
+    font-size: 36px;
+    line-height: 55px;
+    text-decoration: none;
+  }
+  .btn {
+    background-color: #9e9e9d;
+    background: linear-gradient(to top, #9e9e9d, white);
+    padding: 0 15px;
+    color: black;
+    text-shadow: none;
+    border-radius: 5px;
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 820px;
+    height: 100%;
+    background: black;
+    background: linear-gradient(to right, black 80%, transparent);
+    z-index: -1;
+  }
+  &:after {
+    top: -20px;
+    height: 20px;
+    background: linear-gradient(to top, black, transparent);
+  }
+}

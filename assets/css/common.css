@@ -1,0 +1,104 @@
+@import "fonts/bebas/bebasneue.css";
+/* dev */
+html {
+  height: 100%;
+}
+body {
+  background-color: black;
+  color: white;
+  text-shadow: 0 0 3px black;
+  background: #000000 url('img/bg.png') bottom right no-repeat;
+  background-size: auto 80%;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  font-size: 16px;
+  min-height: 100%;
+  padding-top: 160px;
+  padding-bottom: 90px;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+a {
+  color: white;
+  text-decoration: underline;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s;
+}
+a:hover,
+a:visited,
+a:active {
+  opacity: .8;
+}
+header {
+  font-family: 'Bebas Neue';
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 128px;
+  color: white;
+  background-color: #ff0000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-top: 30px solid black;
+  box-shadow: 0 0 60px black;
+}
+article p {
+  line-height: 150%;
+}
+article p.big {
+  font-size: 20px;
+  max-width: 500px;
+}
+footer {
+  border-bottom: 30px solid #ff0000;
+  padding: 15px 0;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+footer .container > * {
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+footer .phone,
+footer .btn {
+  font-family: 'Bebas Neue';
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 55px;
+  text-decoration: none;
+}
+footer .btn {
+  background-color: #9e9e9d;
+  background: -webkit-linear-gradient(bottom, #9e9e9d, #ffffff);
+  background: linear-gradient(to top, #9e9e9d, #ffffff);
+  padding: 0 15px;
+  color: black;
+  text-shadow: none;
+  border-radius: 5px;
+}
+footer:before,
+footer:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 820px;
+  height: 100%;
+  background: black;
+  background: -webkit-linear-gradient(left, #000000 80%, transparent);
+  background: linear-gradient(to right, #000000 80%, transparent);
+  z-index: -1;
+}
+footer:after {
+  top: -20px;
+  height: 20px;
+  background: -webkit-linear-gradient(bottom, #000000, transparent);
+  background: linear-gradient(to top, #000000, transparent);
+}
+/*# sourceMappingURL=common.css.map */
