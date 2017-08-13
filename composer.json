@@ -1,0 +1,7 @@
+{
+  "name": "Stella",
+  "require": {
+    "php": ">=5.3.0",
+    "phpmailer/phpmailer": "^5.2"
+  }
+}

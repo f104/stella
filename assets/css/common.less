@@ -92,8 +92,12 @@ article {
     }
   }
   .big {
-    font-size: 20px;
+    font-size: 120%;
     max-width: 500px;
+  }
+  .main-img {
+    display: none;
+    max-width: 100%;
   }
 }
 
@@ -103,13 +107,16 @@ footer {
   font-size: 14px;
   position: fixed;
   width: 100%;
-  padding: 15px 0; 
   background-color: black;
   bottom: 0;
-  .container > * {
-    display: inline-block;
-    margin-right: 15px;
-    vertical-align: middle;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    > * {
+      display: block;
+      margin: 15px 15px 15px 0;
+    }
   }
   .logo {
     width: 100px;
@@ -117,7 +124,7 @@ footer {
   .phone, .btn {
     .bebas;
     font-size: 36px;
-    line-height: 55px;
+    line-height: 45px;
     text-decoration: none;
   }
   .btn {
@@ -127,5 +134,102 @@ footer {
     color: black;
     text-shadow: none;
     border-radius: 5px;
+    white-space: nowrap;
+  }
+  .container form {
+    display: none;
+    margin: 0;
+  }
+  .form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .form-col {
+      &:last-of-type {
+        padding-left: 15px;
+      }
+      .input-group {
+        display: flex;
+        justify-content: flex-end;
+        margin: 4px 0;
+        label {
+          white-space: nowrap;
+          margin-right: 1ex;
+          line-height: 25px;
+          cursor: pointer;
+        }
+        input, button {
+          border: none;
+          line-height: 25px;
+        }
+        input, button {
+          padding: 0 1ex;
+        }
+        button {
+          width: 120px;
+          background-color: #38A73D;
+          transition: all .2s ease-in-out 0s;
+          cursor: pointer;
+          margin-right: auto;
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  body {
+    padding: 0;
+    background-image: none;
+  }
+  header {
+    position: static;
+    h1 {
+      font-size: 50px;
+      line-height: normal;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  article {
+    .main-img {
+      display: block;
+    }
+  }
+  footer {
+    position: static;
+    .container form {
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+  .row {
+    flex-direction: column;
+    .col {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  } 
+}
+@media (max-width: 812px) {
+  footer {
+    .form-wrapper {
+      flex-direction: column;
+      .form-col {
+        &:last-of-type {
+          padding-left: 0;
+        }
+        .input-group {
+          flex-direction: column;
+        }
+      }
+    }
   }
 }

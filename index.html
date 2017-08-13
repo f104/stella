@@ -71,19 +71,46 @@
           </div>
         </div>
       </div>
+      <img class="main-img" src="assets/images/main.png" alt="Стелла Победители">
     </article>
     <footer>
       <div class="container">
         <img class="logo" src="assets/images/logo.png" alt="МПП Старт">
-        <a class="phone" href="+78452444444">(8452) 44-44-44</a>
-        <a class="btn" href="#">Напишите нам</a>
-        <span>Или закажите<br>
+        <div class="phone">Звоните:
+          <a class="btn" href="tel:+78452444444">(8452) 44-44-44</a>
+        </div>
+        <span class="js-feedback">Или закажите<br>
           <a href="#">обратный звонок</a>
         </span>
+        <form class="feedback" method="post" action="send.php">
+          <div class="form-wrapper">
+            <div class="form-col">
+              <div class="input-group">
+                <label for="name">Представьтесь, пожалуйста</label>
+                <input type="text" id="name" name="name">
+              </div>
+              <div class="input-group">
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" name="phone" required>
+                <input type="hidden" name="email">
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="input-group">
+                <label for="time">Удобное время для звонка</label>
+                <input type="text" id="time" name="time" placeholder="время московское">
+              </div>
+              <div class="input-group">
+                <button type="submit">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
     <script src="assets/js/libs/jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/libs/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script src="assets/js/libs/jquery.form.min.js" type="text/javascript"></script>
     <script src="assets/js/common.js" type="text/javascript"></script>
   </body>
 </html>
